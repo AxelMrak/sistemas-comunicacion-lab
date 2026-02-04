@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://axelmrak.github.io/sistemas-comunicacion-lab/sitemap.xml

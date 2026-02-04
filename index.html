@@ -125,24 +125,29 @@
         .nav-tabs {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             margin-bottom: 30px;
             padding: 15px;
             background: var(--bg-card);
             border-radius: 12px;
             border: 1px solid var(--border);
+            justify-content: center;
         }
 
         .nav-tab {
-            padding: 12px 20px;
+            padding: 10px 16px;
             border: none;
             background: var(--bg-panel);
             color: var(--text);
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
+            white-space: nowrap;
+            flex: 1;
+            min-width: 100px;
+            max-width: 150px;
         }
 
         .nav-tab:hover {
@@ -497,15 +502,149 @@
             white-space: nowrap;
         }
 
+        @media (max-width: 1024px) {
+            .nav-tab {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+                min-width: 90px;
+            }
+            .system-diagram {
+                gap: 5px;
+                padding: 15px 10px;
+            }
+            .diagram-box {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+        }
+
         @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
             .grid-2 {
                 grid-template-columns: 1fr;
             }
+            header {
+                padding: 30px 15px;
+            }
             header h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+            header p {
+                font-size: 1rem;
             }
             .nav-tabs {
                 justify-content: center;
+                padding: 10px;
+                gap: 6px;
+            }
+            .nav-tab {
+                font-size: 0.75rem;
+                padding: 8px 10px;
+                min-width: 80px;
+                flex: 1 1 auto;
+                max-width: none;
+            }
+            .card {
+                padding: 20px 15px;
+            }
+            .card h2 {
+                font-size: 1.3rem;
+            }
+            .system-diagram {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .diagram-arrow {
+                transform: rotate(90deg);
+            }
+            .controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .control-group {
+                min-width: 100%;
+            }
+            .toggle-group {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .toggle-btn {
+                font-size: 0.85rem;
+                padding: 8px 12px;
+            }
+            .param-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            table {
+                font-size: 0.85rem;
+            }
+            th, td {
+                padding: 8px;
+            }
+            .author-link {
+                font-size: 0.85rem;
+                padding: 8px 15px;
+            }
+            footer {
+                padding: 20px 15px;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .footer-links span {
+                display: none;
+            }
+            .constellation {
+                width: 250px;
+                height: 250px;
+            }
+            .legend {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .nav-tabs {
+                gap: 4px;
+            }
+            .nav-tab {
+                font-size: 0.7rem;
+                padding: 6px 8px;
+                min-width: 70px;
+            }
+            .card h2 {
+                font-size: 1.1rem;
+            }
+            .card h3 {
+                font-size: 1rem;
+            }
+            .formula {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+            .param-grid {
+                grid-template-columns: 1fr;
+            }
+            .bit-display {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+            .constellation {
+                width: 200px;
+                height: 200px;
+            }
+            canvas {
+                height: 250px;
             }
         }
     </style>
